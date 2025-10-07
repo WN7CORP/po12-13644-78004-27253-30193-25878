@@ -58,10 +58,10 @@ export const FooterMenu = ({
   const getItemStyles = (item: typeof menuItems[0], isActive: boolean) => {
     const baseStyles = "relative flex flex-col items-center py-3 px-3 rounded-xl transition-all duration-300 transform active:scale-95 group min-w-0 flex-1";
     if (isActive) {
-      // Todos os botões ativos usam a paleta vermelha vibrante
-      return `${baseStyles} text-white bg-gradient-to-br from-red-500 to-red-700 shadow-lg shadow-red-500/40 scale-105 border border-red-400/30`;
+      // Todos os botões ativos usam a paleta vermelha escura
+      return `${baseStyles} text-white bg-gradient-to-br from-[#8B3A3A] to-[#6B2929] shadow-lg shadow-[#8B3A3A]/50 scale-105 border border-[#A04A4A]/30`;
     } else {
-      return `${baseStyles} text-muted-foreground hover:text-white hover:bg-red-500/20 transition-all duration-300`;
+      return `${baseStyles} text-muted-foreground hover:text-white hover:bg-[#8B3A3A]/20 transition-all duration-300`;
     }
   };
   const getIconStyles = (item: typeof menuItems[0], isActive: boolean) => {
@@ -150,9 +150,9 @@ export const FooterMenu = ({
               return <div key={item.id} className="flex justify-center">
                     <button onClick={() => handleItemClick(item)} className={`
                         relative flex flex-col items-center justify-center
-                        ${isProfessoraIA ? 'w-16 h-16 rounded-full bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white shadow-2xl shadow-red-500/60 hover:shadow-red-500/80 scale-110 border-2 border-red-400/60' : 'w-16 h-16 rounded-2xl'}
+                        ${isProfessoraIA ? 'w-16 h-16 rounded-full bg-gradient-to-br from-[#8B3A3A] via-[#A04545] to-[#6B2929] text-white shadow-2xl shadow-[#8B3A3A]/60 hover:shadow-[#8B3A3A]/80 scale-110 border-2 border-[#A04A4A]/60' : 'w-16 h-16 rounded-2xl'}
                         transition-all duration-500 transform
-                        ${!isProfessoraIA && (isActive ? 'bg-gradient-to-br from-red-500/40 to-red-600/30 text-white shadow-xl scale-105 border-2 border-red-400/50' : 'bg-white/8 text-white/80 hover:bg-red-500/20 hover:text-white hover:scale-105 hover:border-red-500/30 border border-white/10')}
+                        ${!isProfessoraIA && (isActive ? 'bg-gradient-to-br from-[#8B3A3A]/40 to-[#6B2929]/30 text-white shadow-xl scale-105 border-2 border-[#A04A4A]/50' : 'bg-white/8 text-white/80 hover:bg-[#8B3A3A]/20 hover:text-white hover:scale-105 hover:border-[#8B3A3A]/30 border border-white/10')}
                         active:scale-95
                         backdrop-blur-md
                       `} style={{
@@ -173,10 +173,10 @@ export const FooterMenu = ({
                         </span>}
                       
                       {/* Enhanced glow effect for Professora IA */}
-                      {isProfessoraIA && <div className="absolute inset-0 bg-gradient-to-t from-red-600/40 to-red-400/20 rounded-full animate-pulse" />}
+                      {isProfessoraIA && <div className="absolute inset-0 bg-gradient-to-t from-[#8B3A3A]/40 to-[#A04545]/20 rounded-full animate-pulse" />}
                       
                       {/* Active indicator with glow */}
-                      {isActive && !isProfessoraIA && <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-8 h-1.5 bg-gradient-to-r from-transparent via-red-400 to-transparent rounded-full shadow-lg shadow-red-400/50" />}
+                      {isActive && !isProfessoraIA && <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-8 h-1.5 bg-gradient-to-r from-transparent via-[#A04545] to-transparent rounded-full shadow-lg shadow-[#A04545]/50" />}
                     </button>
                   </div>;
             })}

@@ -147,9 +147,9 @@ const CategoryAccessSection = memo(() => {
                   group cursor-pointer transition-all duration-500 hover:scale-[1.05] 
                   rounded-2xl 
                   ${isMobile ? 'p-4 h-44' : isTablet ? 'p-5 h-48' : 'p-6 h-52'} 
-                  flex flex-col justify-between shadow-2xl hover:shadow-red-500/30
+                  flex flex-col justify-between shadow-[0_8px_30px_rgba(139,58,58,0.5)] hover:shadow-[0_12px_40px_rgba(139,58,58,0.7)]
                   animate-fade-in-up relative overflow-hidden
-                  border border-red-500/20 hover:border-red-400/40
+                  border border-[#8B3A3A]/30 hover:border-[#A04545]/50
                 `}>
                 {/* Glossy overlay effect */}
                 
