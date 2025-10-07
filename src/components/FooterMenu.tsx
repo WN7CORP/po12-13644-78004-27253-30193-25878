@@ -58,20 +58,10 @@ export const FooterMenu = ({
   const getItemStyles = (item: typeof menuItems[0], isActive: boolean) => {
     const baseStyles = "relative flex flex-col items-center py-3 px-3 rounded-xl transition-all duration-300 transform active:scale-95 group min-w-0 flex-1";
     if (isActive) {
-      switch (item.color) {
-        case 'special-ai':
-          return `${baseStyles} text-white bg-gradient-to-br from-red-500 to-red-700 shadow-lg scale-105`;
-        case 'community':
-          return `${baseStyles} text-white bg-gradient-to-br from-purple-600 to-blue-600 shadow-lg scale-105`;
-        case 'info':
-          return `${baseStyles} text-white bg-gradient-to-br from-purple-600 to-blue-600 shadow-lg scale-105`;
-        case 'library':
-          return `${baseStyles} text-white bg-gradient-to-br from-green-600 to-emerald-600 shadow-lg scale-105`;
-        default:
-          return `${baseStyles} text-primary bg-gradient-to-br from-primary/30 to-accent-legal/30 shadow-lg scale-105 border border-primary/20`;
-      }
+      // Todos os botões ativos usam a paleta vermelha vibrante
+      return `${baseStyles} text-white bg-gradient-to-br from-red-500 to-red-700 shadow-lg shadow-red-500/40 scale-105 border border-red-400/30`;
     } else {
-      return `${baseStyles} text-muted-foreground hover:text-primary hover:bg-footer-hover transition-all duration-300`;
+      return `${baseStyles} text-muted-foreground hover:text-white hover:bg-red-500/20 transition-all duration-300`;
     }
   };
   const getIconStyles = (item: typeof menuItems[0], isActive: boolean) => {
